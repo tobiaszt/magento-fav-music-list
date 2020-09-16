@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col s12 l6">
+        <form class="row valign-wrapper" data-bind="submit: addAlbum">
+            <div class="input-field col s10">
+                <input data-bind="value: newAlbumText" placeholder="Album title" />
+            </div>
+            <button type="submit" class="waves-effect waves-light btn">Add to List <i
+                    class="material-icons left">add_circle_outline</i></button>
+        </form>
+    </div>
+    <div class="col s12 l6 col s2">
+        <ul class="collection" data-bind="foreach: albums, visible: albums().length > 0">
+            <li class="collection-item">
+                <div> 
+                    <span data-bind="text: title"></span>
+                    <div class="secondary-content valign-wrapper">
+                        <label>
+                            <input type="checkbox" data-bind="checked: isBestOfTheBest, click: $parent.editAlbum" />
+                            <span>Best of the best</span>
+                        </label>
+
+                        <a href="#!" data-bind="click: $parent.removeAlbum">
+                            <i class="material-icons red-text text-darken-3">remove_circle_outline</i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

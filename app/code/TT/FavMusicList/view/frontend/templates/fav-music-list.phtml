@@ -1,0 +1,17 @@
+<div class="container" data-bind="scope: 'favmusiclist'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "favmusiclist": {
+                        "component": "TT_FavMusicList/js/fav-music-list",
+                        "template" : "TT_FavMusicList/fav-music-list"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</div>
